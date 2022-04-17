@@ -1,0 +1,578 @@
+@font-face {
+    font-family: RedHatDisplay;
+    src: url(assets/font/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #F9F6F5;
+    width: 100%;
+}
+
+.header {
+    display: grid;
+    width: 100vw;
+    height: 131px;
+    background-color: #F9F6F5;
+    grid-template-columns: 100px min-content 1fr 380px 1fr 120px 1fr;
+    align-items: center;
+
+}
+
+.logo {
+    grid-column: 2/3;
+}
+
+.nav {
+    grid-column: 4/5;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content 1fr max-content 1fr max-content;
+    font-family: 'RedHatDisplay';
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.home {
+    grid-column: 1/2;
+}
+
+.products {
+    grid-column: 3/4;
+}
+
+.about_us {
+    grid-column: 5/6;
+}
+
+.contact_us {
+    grid-column: 7/8;
+}
+.account {
+    grid-column: 6/7;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*блок main*/
+.main {
+    display: grid;
+    width: 100vw;
+    height: 612px;
+    grid-template-columns: 100px 550px repeat(2, 72px) 1fr;
+    grid-template-rows: repeat(5, min-content);
+    background-color: #F9F6F5;
+}
+
+.main_title {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    z-index: 1;
+    margin-top: 43px;
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 70px;
+}
+
+.main_text {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: 30px;
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #555555;
+}
+
+.search {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 320px;
+    min-height: 48px;
+    background-color: white; 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+input[type="search"] {
+    border: none; 
+}
+
+.search_submit {
+    width: 32px; 
+    height: 32px; 
+    border: none; 
+    background: url(assets/img/search.png) no-repeat 50% 50%; 
+    align-self: center;
+    margin-right: 8px;
+}
+
+.button {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    justify-self: start;
+    width: 148px;
+    height: 56px;
+    margin-top: 60px;
+    background-color: #402F2C;
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.img_slyde {
+    grid-column: 3/5;
+    grid-row: 5;
+    z-index: 1;
+}
+
+.img_cosmetic {
+    grid-column: 3/6;
+    grid-row: 1/6;
+    max-width:100%;
+}
+
+/*блок компании*/
+
+.company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 370px;
+    background-color: #F9F6F5;
+}
+
+.company_container {
+    display: grid;
+    border-top: 1px solid #EEEEEE;
+    border-bottom:1px solid #EEEEEE; 
+    width: 80%;
+    height: 113px;
+    grid-template-columns: repeat(5,min-content 1fr) min-content;
+    align-items: center; 
+    grid-gap: 100px;
+}
+
+/*блок product*/
+.product {
+    width: 100vw;
+    height: 1037px;
+    background-color: #F9F6F5;
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 80px;
+    grid-template-rows: repeat(4,min-content);
+    column-gap: 20px;
+}
+
+.product_title {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 70px;
+    color: #000000;
+}
+
+.product_subtitle {
+    grid-row: 2/3;
+    grid-column: 2/4;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.product_subtitle_text {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #555555;
+}
+
+.discover {
+    align-self: center;
+    display: flex;
+}
+
+.discover a {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #222222;
+}
+
+.img_product_1 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    max-width:100%
+}
+
+.img_product_2 {
+    grid-row: 3/4;
+    grid-column: 3/4;
+    max-width:100%
+}
+
+.left {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    border-bottom: 1px solid #cfcfcf;
+    border-left: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf;
+}
+
+.right {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    border-bottom: 1px solid #cfcfcf;
+    border-left: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf;
+}
+
+.product_description p:first-child{
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+    color: #222222;
+    margin: 14px 0px 16px 32px;
+}
+
+.product_description p:last-child{
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #555555;
+    width: 516px;
+    height: 96px;
+    margin: 0px 0px 0px 32px;
+}
+
+.product_buttons {
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.button_buy {
+    width: 137px;
+    height: 56px;
+    margin-right: 24px;
+    background-color: #402F2C;
+    text-align: center;
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.button_add {
+    width: 162px;
+    height: 56px;
+    margin-right: 24px;
+    border: 1px solid #685A52;
+    text-align: center;
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #402F2C;
+}
+
+.product_buttons p {
+    margin-left: 130px;
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 32px;
+    color: #222222;
+    background-color: #F9F6F5;
+}
+
+/* блок статистики*/
+
+.statistic {
+    width: 100vw;
+    height: 250px;
+    margin-top: 128px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FDF8F5;
+}
+
+.statistic {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #555555;
+}
+
+/* блок статей и отзывов*/
+
+.article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    column-gap: 30px;
+    row-gap: 120px;
+    margin: 130px 30px 140px 100px;
+}
+
+.article_block {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.article_text_title {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 70px;
+    color: #000000;
+    margin: 40px 0px 0px 0px;
+}
+
+.article_text {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #555555;
+    margin: 20px 0px 0px 0px;
+}
+
+.button_shop {
+    width: 148px;
+    height: 56px;
+    margin-top: 50px;
+    background-color: #402F2C;
+    text-align: center;
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.products_img {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.girl_img {
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.reviews_title {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: #222222;
+}
+
+.reviews_text_marcs {
+    display: flex;
+    align-items: flex-start;
+}
+
+.marcs {
+    align-self: flex-start;
+    margin-top: 40px;
+}
+
+.reviews_text {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #555555;
+    margin: 40px 0px 0px 0px;
+}
+
+/*футер*/
+
+.footer {
+    width: 100vw;
+    background-color: #FAFAFA;
+}
+
+.footer-container {
+    margin: 100px 100px 52px 100px;
+}
+
+.footer_subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 218px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.footer_subscribe_title {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;
+    color: #222222;
+}
+
+.subscribe {
+    width: 320px;
+    min-height: 48px;
+    background-color: white; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.footer_sub_input {
+    border: none;
+}
+
+.footer_sub_submit {
+    width: 103px;
+    height: 40px;
+    background-color: #402F2C;
+    font-family: 'RedHatDisplay';
+    color: #FFFFFF;
+}
+
+.footer_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 320px;
+}
+
+.footer_text {
+    width: 326px;
+    height: 216px;
+}
+
+.footer_text p {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #555555;
+    margin-top: 38px;
+}
+
+.footer_link {
+    width: 96px;
+    height: 163px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer_link_title {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #222222;
+}
+
+.footer_link a{
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #222222;
+    text-decoration: none;
+
+}
+
+.link_1 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.link_2 { 
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer_contact {
+    width: 183px;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer_contact_title {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #222222;
+    margin: 0px;
+}
+
+.footer_contact_mail {
+    margin-bottom: 20px;
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #222222;
+}
+
+.footer_contact_phone {
+    font-family: 'RedHatDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #222222;
+    margin-top: 0px;
+}
